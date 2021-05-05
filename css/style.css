@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:300,400&display=swap");
+/* colors */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Comfortaa", cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/*---- GLOBAL ----*/
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 + p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+  h2 + p {
+    font-size: 1.5rem;
+  }
+}
+
+/*---- header ----*/
+header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/horiznos-header.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/horiznos-header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .logo {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0 0 2px #fff;
+}
+
+header nav {
+  padding-top: 50px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+header nav ul li {
+  text-shadow: 0 0 1px #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-right: 100px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+@media (max-width: 767px) {
+  header nav ul li {
+    font-size: 1.3rem;
+    margin-right: 0px;
+  }
+}
+
+header nav ul li:last-child {
+  margin-right: 0px;
+}
+
+header nav ul li:hover {
+  color: #32b777;
+}
+
+header h1 {
+  font-size: 5rem;
+}
+
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+header h1 + p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+  header h1 + p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+
+header button {
+  padding: 15px 50px;
+  background: #32b777;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.7rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  border: none;
+  border-radius: 40px;
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  header button {
+    font-size: 1.3rem;
+  }
+}
+
+header button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+header div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*---- about ----*/
+.about {
+  padding: 80px 0;
+  text-align: center;
+  background: #ececec;
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding: 30px 0;
+  }
+}
+
+.about article:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 60px;
+}
+
+.about article:last-child div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+}
+
+@media (max-width: 767px) {
+  .about article:last-child div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+.about article:last-child div p {
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .about article:last-child div p {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+/*---- services ----*/
+.services {
+  padding: 80px 0;
+}
+
+@media (max-width: 767px) {
+  .services {
+    padding: 30px 0;
+  }
+}
+
+.services article:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: flex start;
+      -ms-flex-align: flex start;
+          align-items: flex start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 40px;
+}
+
+.services article:last-child div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47%;
+          flex: 0 0 47%;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .services article:last-child div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+.services article:last-child div i {
+  padding: 25px;
+  background: #32b777;
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  border-radius: 5px;
+  float: left;
+  margin: 0 40px 20px 0;
+}
+
+@media (max-width: 767px) {
+  .services article:last-child div i {
+    margin: 0 20px 20px 0;
+  }
+}
+
+.services article:last-child div h4 {
+  font-size: 1.7rem;
+}
+
+.services article:last-child div p {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 767px) {
+  .services article:last-child div p {
+    font-size: 1.2rem;
+  }
+}
+
+/*---- footer ----*/
+footer {
+  background: #222;
+  padding: 100px 0;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  footer {
+    padding: 60px 0;
+  }
+}
+
+footer article {
+  font-size: 1.3rem;
+}
+
+footer article:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer article:first-child div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+}
+
+@media (max-width: 767px) {
+  footer article:first-child div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+}
+
+footer article:first-child a {
+  text-decoration: underline;
+}
+
+footer article:last-child {
+  border-top: 2px solid #555;
+  padding-top: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

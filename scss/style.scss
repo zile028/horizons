@@ -1,0 +1,191 @@
+@import "starter";
+@import "mixins";
+
+/*---- GLOBAL ----*/
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    @media (max-width: 767px) {
+        font-size: 2.5rem;
+    }
+    & + p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2rem;
+        @media (max-width: 767px) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/*---- header ----*/
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(black, 0.5), rgba(black, 0.5)), url(../img/horiznos-header.jpg);
+    @include bgBasic;
+    color: $white;
+    text-align: center;
+    @include flex(flex-start, center, column);
+    .logo {
+        font-size: 3rem;
+        font-weight: 700;
+        font-family: $textFont;
+        text-shadow: 0 0 2px $white;
+    }
+    nav {
+        padding-top: 50px;
+        ul {
+            @include flex(center, center);
+            @media (max-width: 767px) {
+                justify-content: space-between;
+            }
+            li {
+                text-shadow: 0 0 1px $white;
+                font-size: 1.7rem;
+                font-weight: 700;
+                margin-right: 100px;
+                transition: $transition;
+                @media (max-width: 767px) {
+                    font-size: 1.3rem;
+                    margin-right: 0px;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+    h1 {
+        font-size: 5rem;
+        @media (max-width: 767px) {
+            font-size: 3rem;
+        }
+        & + p {
+            text-align: center;
+            font-weight: 700;
+            font-size: 2rem;
+            @media (max-width: 767px) {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    button {
+        @include btn($green, $white, $gray, $white);
+        border: none;
+        border-radius: 40px;
+        margin-top: 30px;
+    }
+    div {
+        flex: 1;
+        @include flex(center, center, column);
+    }
+}
+/*---- about ----*/
+.about {
+    padding: $py;
+    text-align: center;
+    background: $lightgray;
+    @media (max-width: 767px) {
+        padding: 30px 0;
+    }
+    article {
+        &:last-child {
+            @include flex(space-between, flex-start);
+            margin-top: 60px;
+            div {
+                flex: 0 0 32%;
+                @media (max-width: 767px) {
+                    flex: 0 0 100%;
+                }
+                p {
+                    font-size: 1.5rem;
+                    margin-top: 40px;
+                    @media (max-width: 767px) {
+                        font-size: 1.3rem;
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*---- services ----*/
+.services {
+    padding: $py;
+    @media (max-width: 767px) {
+        padding: 30px 0;
+    }
+    article {
+        &:last-child {
+            @include flex(space-between, flex start);
+            margin-top: 40px;
+            div {
+                flex: 0 0 47%;
+                margin-bottom: 50px;
+                @media (max-width: 767px) {
+                    flex: 0 0 100%;
+                }
+                i {
+                    padding: 25px;
+                    background: $green;
+                    text-align: center;
+                    color: $white;
+                    font-size: 4rem;
+                    border-radius: 5px;
+                    float: left;
+                    margin: 0 40px 20px 0;
+                    @media (max-width: 767px) {
+                        margin: 0 20px 20px 0;
+                    }
+                }
+                h4 {
+                    font-size: 1.7rem;
+                }
+                p {
+                    font-size: 1.4rem;
+                    @media (max-width: 767px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*---- footer ----*/
+footer {
+    background: $darkgray;
+    padding: 100px 0;
+    color: $white;
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
+    article {
+        font-size: 1.3rem;
+        &:first-child {
+            @include flex(space-between, flex-start);
+            div {
+                flex: 0 0 32%;
+                @media (max-width: 767px) {
+                    flex: 0 0 100%;
+                    margin-bottom: 30px;
+                }
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+        &:last-child {
+            border-top: 2px solid $gray;
+            padding-top: 40px;
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+}
